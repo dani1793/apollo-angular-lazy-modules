@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Apollo } from 'apollo-angular';
-import { Observable } from 'rxjs/Observable';
-import { map } from 'rxjs/operators/map';
 
-import authorQuery from '../shared/graphql/authorQuery';
+import { authorQuery } from '../shared/graphql/authorQuery';
+import {Observable} from 'rxjs';
+import { tap } from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +24,6 @@ export class HomeComponent implements OnInit {
         },
         fetchPolicy: 'network-only',
       })
-      .pipe(map(result => result.data.author));
+      .pipe(tap(result => result.data.author));
   }
 }

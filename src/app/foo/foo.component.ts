@@ -4,7 +4,7 @@ import { Apollo } from 'apollo-angular';
 import { authorQuery } from '../shared/graphql/authorQuery';
 
 import {Observable} from 'rxjs';
-import { tap } from 'rxjs/internal/operators';
+import { map } from 'rxjs/internal/operators';
 
 
 
@@ -28,6 +28,8 @@ export class FooComponent implements OnInit {
         },
         fetchPolicy: 'network-only',
       })
-      .pipe(tap(result => result.data.author));
+      .pipe(map(result => {
+        return result.data.author;
+      }));
   }
 }

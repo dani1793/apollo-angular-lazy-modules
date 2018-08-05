@@ -1,4 +1,9 @@
-# ApolloAngularLazyModules
+# Apollo Angular Local State management with Lazy Modules
+
+This project is an example project to help people who are looking for
+- get a basic understanding of graphQL
+- Integration of graphQL with angular lazy loaded modules
+- Usage of graphQL for local state management
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 

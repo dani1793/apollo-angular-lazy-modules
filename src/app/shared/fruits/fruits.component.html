@@ -1,0 +1,13 @@
+<div>
+  <h1>Fruits</h1>
+  <input
+    type='text'
+    placeholder='Pick up milk, Grab, cheese, etc'
+    #todoInput
+  />
+  <input type='submit' value='Add' (click)="addTodo(todoInput.value)"/>
+
+  <div>
+    <p *ngFor="let fruit of data?.fruits">{{fruit.text}}</p>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 
-import { authorQuery } from '../shared/graphql/authorQuery';
+import { authorQuery } from '../graphql/authorQuery';
 
 import {Observable} from 'rxjs';
 import { map } from 'rxjs/internal/operators';

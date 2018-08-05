@@ -8,6 +8,5 @@ export const authorQuery =  gql`
       ...authorFragment
     }
   }
-
   ${authorFragment}
 `;

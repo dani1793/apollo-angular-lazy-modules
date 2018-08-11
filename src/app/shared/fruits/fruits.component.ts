@@ -10,6 +10,12 @@ const updateFruitsQuery = gql`
   }
 `;
 
+const removeFruitsQuery = gql`
+  mutation removeFruit($id: number!, $query: string!) {
+    removeFruit(id: $id, query: $query) @client
+  }
+`;
+
 @Component({
   selector: 'app-fruits',
   templateUrl: './fruits.component.html',
@@ -31,6 +37,20 @@ export class FruitsComponent implements OnInit {
         this.loading = loading;
         this.data = data || [];
       });
+  }
+
+  remove(id: number) {
+    this.apollo.mutate({
+      mutation: removeFruitsQuery,
+      variables: {
+        text: id,
+        query: getAllFruitsQuery
+      }
+    }).subscribe(({ data }) => {
+      console.log('got data', data);
+    },(error) => {
+      console.log('there was an error sending the query', error);
+    });
   }
 
   addTodo(val: string) {

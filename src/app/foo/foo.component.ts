@@ -6,9 +6,6 @@ import { authorQuery } from '../graphql/authorQuery';
 import {Observable} from 'rxjs';
 import { map } from 'rxjs/internal/operators';
 
-
-
-
 @Component({
   selector: 'app-foo',
   templateUrl: './foo.component.html',

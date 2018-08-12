@@ -1,4 +1,12 @@
-<a routerLink="">Home</a>
-<a routerLink="foo">Foo</a>
-<a routerLink="bar">Bar</a>
+<mat-toolbar color="primary">
+  <span class="fill-remaining-space"></span>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button mat-button routerLink="/foo" routerLinkActive="selected">Foo</button>
+    <button mat-button routerLink="/bar" routerLinkActive="selected">Bar</button>
+    <button mat-button routerLink="/login" routerLinkActive="selected">Login</button>
+  </div>
+</mat-toolbar>
+<mat-menu>
+
+</mat-menu>
 <router-outlet></router-outlet>

@@ -3,30 +3,34 @@ import gql from 'graphql-tag';
 export const getAllFruitsQuery = gql`
   query getAllFruitsQuery {
     fruits @client {
+      id
       text
     }
   }`;
 
-export const fruitsDefault = {
-  __typename: 'fruits',
-  fruits: [{
+export const fruitsDefault = [{
     id: 1,
-    text: 'apple'
+    text: 'apple',
+    __typename: 'fruits',
   },
     {
       id: 2,
-      text: 'mango'
+      text: 'mango',
+      __typename: 'fruits',
     },
     {
       id: 3,
-      text: 'orange'
+      text: 'orange',
+      __typename: 'fruits',
     },
     {
       id: 4,
-      text: 'date'
+      text: 'date',
+      __typename: 'fruits',
     },
     {
       id: 5,
-      text: 'banana'
-    }],
-};
+      text: 'banana',
+      __typename: 'fruits',
+    }
+    ];

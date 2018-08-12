@@ -35,6 +35,7 @@ export class FruitsComponent implements OnInit {
       .valueChanges
       .subscribe(({ data, loading }) => {
         this.loading = loading;
+        console.log(data);
         this.data = data || [];
       });
   }
@@ -43,7 +44,7 @@ export class FruitsComponent implements OnInit {
     this.apollo.mutate({
       mutation: removeFruitsQuery,
       variables: {
-        text: id,
+        id,
         query: getAllFruitsQuery
       }
     }).subscribe(({ data }) => {

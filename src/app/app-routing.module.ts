@@ -15,6 +15,9 @@ const routes: Routes = [
   {
     path: 'bar',
     loadChildren: './bar/bar.module#BarModule',
+  },{
+    path: 'login',
+    loadChildren: './auth/auth.module#AuthModule',
   },
 ];
 
